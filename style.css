@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: darkcyan;
+}
 
 html {
     font-family: 'Monserrat';
@@ -49,14 +52,26 @@ section p {
 
 
 .texts p {
-    color: black;
+    color: white;
     text-align: left;
- 
+   text-transform: lowercase;
     width: 100%;
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;
+    font-size: 35px;
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
 }
 .texts p.replay{
  text-align: right;
+}
+
+.text-answer{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    color: white;
+    
 }

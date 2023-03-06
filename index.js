@@ -16,10 +16,6 @@ let p = document.createElement('p')
 //////////
 
 
-
-
-
-
     
 const textMain = document.querySelector('.text-main')
 const textAnswer = document.querySelector('.text-answer')
@@ -29,10 +25,37 @@ const unit_1 ={
     afraid:'Qorqmoq',
     agree:'Rozi bolmoq',
     angry:'Jahldor',
-    arrive: 'Yetib kelmoq',
     attack: 'Hujum qilmoq',
     bottom: 'Tagi , pastki',
     clever: 'Aqilli , ziyrak',
+    cruel: 'shafqatsiz',
+    finally: 'ahiri , vanihoyat',
+    hide: 'yashirinmoq',
+    hunt: 'ov qilmoq',
+    middle: "o'rta , markaz",
+    moment: 'sekund',
+    promise: 'vada bermoq',
+    reply: 'javob bermoq',
+    safe: 'hafsiz , behatar',
+    trick: 'hiyla , nayrang',
+    well: 'yaxshi',
+    // evil:'yomon , yovuz',
+    // experiment: 'tajriba , sinov',
+    // kill: "o'ldirmoq",
+    // laboratory: 'labaratoriya',
+    // loud: 'shovqin',
+    // nervous:'xavotirlangan',
+    // noise: 'shovqin',
+    // project: 'loyiha',
+    // scare: "qo'rqitmoq",
+    // secret: 'sir',
+    // shout: 'baqiriq , qichqiriq',
+    // smell: 'hidlamoq',
+    // terrible: 'juda yomon',
+    // worse: 'yomonroq',
+
+
+
     
 }
 
@@ -87,6 +110,19 @@ console.log(adham , 'adham')
 textAnswer.textContent = name[i][1]
 
 
+
+
+function playText(text){
+    const utterance =  new  SpeechSynthesisUtterance(text)
+    // utterance.rate = speedInput.value || 1
+    utterance.lang= 'uz-UZB'
+    speechSynthesis.speak(utterance)
+    
+    }
+
+
+
+
 /////
 
 
@@ -100,9 +136,10 @@ recognition.addEventListener('result', (e)=> {
 
 
     p.innerText = text
+
     texts.appendChild(p)
 
-
+///text
 
 
 
@@ -117,6 +154,7 @@ if(name[i][0]== text){
     }
 textAnswer.textContent = name[i][1]
 
+playText(name[i][1])   //// ovozni chiqaruvchi
 ///  var ism = name[i][1]
 }
 
