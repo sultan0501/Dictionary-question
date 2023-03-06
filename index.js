@@ -1,4 +1,9 @@
-const texts = document.querySelector('.texts')
+const texts = document.querySelector('.texts p')
+console.log(texts.textContent)
+const textQuestion = document.querySelector('.text-question')
+const btn = document.querySelector('.btn')
+
+
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
@@ -45,9 +50,10 @@ const num = Object.values(unit_1)
 
 
 
-console.log('akbar', name[i][1])
-console.log(ism)
-console.log(num)
+console.log('akbar', name) 
+
+console.log(ism , 'ism')
+console.log(num, 'num')
 
 
 
@@ -61,22 +67,24 @@ let sanjar =akbar[0]
 let adham = akbar[1]
 
 
-textAnswer.textContent = adham
 
 
 
-console.log(sanjar )
-console.log(adham)
+
+
+
+console.log(sanjar , 'sanjar' )
+console.log(adham , 'adham')
 
 
 
     
-    
-    
 
 
 
 
+
+textAnswer.textContent = name[i][1]
 
 
 /////
@@ -94,23 +102,91 @@ recognition.addEventListener('result', (e)=> {
     p.innerText = text
     texts.appendChild(p)
 
- 
-
-
- 
-    ///////////
 
 
 
 
 
 
-////////
-    // if(e.results[0].isFinal){
-    //     p= document.createElement('p')
-    // }
+function sulton(){
+
+if(name[i][0]== text){
+    i++
+    if(i>=name.length){
+        i=0
+    }
+textAnswer.textContent = name[i][1]
+
+///  var ism = name[i][1]
+}
+
+}
+sulton()
 
 
+
+
+
+
+
+
+
+
+// function akbar(){
+// if(name[i][0]== texts.textContent){
+//     i++ 
+    
+//  if(i>=name.length){
+//     i=0
+  
+//  }
+
+//  textAnswer.textContent= name[i][1] 
+//  //shu yerni tekshir
+
+//  sulton()
+// }
+
+  
+// }
+
+// akbar()
+
+
+
+// function sulton(){
+
+//     if(text == sanjar){
+   
+//    textAnswer.textContent= name[i][1]   // shu yerni tekshir
+    
+   
+//     }
+   
+//    }
+//    sulton()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  if(e.results[0].isFinal){
+//       p= document.createElement('p')
+        
+//     }
 
 })
 
@@ -120,48 +196,3 @@ recognition.addEventListener('end', ()=> {
 
 recognition.start()
 
-
-//////////////////////
-
-// const textMain = document.querySelector('.text-main')
-// const textAnswer = document.querySelector('.text-answer')
-
-
-// const unit_1 ={
-//     afraid:'qorqmoq',
-//     agree:'rozi bolmoq',
-//     angry:'jahldor',
-//     arrive: 'yetib kelmoq',
-//     attack: 'hujum qilmoq',
-//     bottom: 'tagi , pastki',
-//     clever: 'aqilli , ziyrak',
-    
-// }
-
-
-// if(text == sanjar){
-//     textMain.textContent = 'togri'
-// }
-
-
-
-
-
-// const name=  Object.entries(unit_1)
-// const ism =  Object.keys(unit_1)
-// const num = Object.values(unit_1)
-// console.log(name)
-// console.log(ism)
-// console.log(num)
-
-
-// let number = Math.floor(Math.random()*name.length)
-// let akbar = name[number]
-// let sanjar =akbar[0]
-// let adham = akbar[1]
-
-
-// textAnswer.textContent = adham
-
-// console.log(sanjar)
-// console.log(adham)
