@@ -13,7 +13,6 @@ recognition.interimResults =true
 let p = document.createElement('p')
 
 
-//////////
 
 
     
@@ -123,7 +122,7 @@ function playText(text){
 
 
 
-/////
+
 
 
 recognition.addEventListener('result', (e)=> {
@@ -139,7 +138,7 @@ recognition.addEventListener('result', (e)=> {
 
     texts.appendChild(p)
 
-///text
+
 
 
 
@@ -154,8 +153,8 @@ if(name[i][0]== text){
     }
 textAnswer.textContent = name[i][1]
 
-playText(name[i][1])   //// ovozni chiqaruvchi
-///  var ism = name[i][1]
+playText(name[i][1])   
+
 }
 
 }
