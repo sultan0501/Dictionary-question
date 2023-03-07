@@ -170,56 +170,6 @@ sulton()
 
 
 
-// function akbar(){
-// if(name[i][0]== texts.textContent){
-//     i++ 
-    
-//  if(i>=name.length){
-//     i=0
-  
-//  }
-
-//  textAnswer.textContent= name[i][1] 
-//  //shu yerni tekshir
-
-//  sulton()
-// }
-
-  
-// }
-
-// akbar()
-
-
-
-// function sulton(){
-
-//     if(text == sanjar){
-   
-//    textAnswer.textContent= name[i][1]   // shu yerni tekshir
-    
-   
-//     }
-   
-//    }
-//    sulton()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //  if(e.results[0].isFinal){
 //       p= document.createElement('p')
